@@ -73,3 +73,56 @@ class Solution:
         #unpacks the recursion and checks the boolean we eastablished and returns that
         isBst, min, max = helper(root)
         return isBst
+
+
+# tree iteration
+# """
+# Definition of TreeNode:
+# class TreeNode:
+#     def __init__(self, val):
+#         self.val = val
+#         self.left, self.right = None, None
+# """
+#
+# class Solution:
+#     """
+#     @param root: The root of binary tree.
+#     @return: True if the binary tree is BST, or false
+#     """
+#     def isValidBST(self, root):
+#
+#         if not root:
+#             return True
+#
+#         stack = []
+#
+          #while the root is not null put the root into the stack and set that equal to the left root
+#         while root:
+#             stack.append(root)
+#             root = root.left
+#
+          #create a variable to hold for the first item in the stack. as the last item of the stack.
+#         last_node = stack [-1]
+#
+          #while that stack is still full pop the item and check its right
+#         while stack:
+#             node = stack.pop()
+#             node = node.right
+#
+              #if that node is valid add it to the stack and then do check its left side
+#             while node:
+#                 stack.append(node)
+#                 node = node.left
+#
+              #if the stack is valid check if the value is less than or equal to the last nodes value if it is then the subtree is false and return false
+#             if stack:
+#                 if stack[-1].val <= last_node.val:
+#                     return False
+                  #reset the last node to last item in the stack
+#                 last_node = stack[-1]
+#
+          #if the code returns then return true in the recursion step
+#         return True
+#
+#
+#
