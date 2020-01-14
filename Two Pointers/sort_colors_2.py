@@ -32,8 +32,10 @@ class Solution:
             #need to set the i to left position since that will be the 0 posiiton for the current list
             pivot, i = colors[left], left
 
+            #hold left and right in values
             less, greater = left, right
 
+            #only while the value of i is less than or equal to the greater will this run
             while i <= greater:
                 if colors[i] < pivot:
                     colors[i], colors[less] = colors[less], colors[i]
