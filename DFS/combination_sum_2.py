@@ -32,15 +32,17 @@ class Solution:
         if target < 0:
             return
         if target == 0:
-            if path not in result:
-                #append a deep copy of the code
-                result.append(path[:])
-                return
-            else:
-                return
+            #append a deep copy of the code
+            result.append(path[:])
+            return
+
 
         #iterate over the current i to the len of the list
         for i in range(index, len(num)):
+
+            #check with the current i if it is greater we are at the previous recursion depth and if the current i == the previous i skip this level
+            if i > index and num[i] == num[i - 1]:
+                continue
             #add the current i to our path and then increase the i to one to check the next index
             path.append(num[i])
             self.dfs(num, target - num[i], result, i + 1, path)
